@@ -40,7 +40,9 @@ while True:
         break
     print(record.UnitPrice)`
 
-# SQL TASK:
+### Useful link to help PYODBC installation:
+- `https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/`
+### SQL TASK:
 
 
 
