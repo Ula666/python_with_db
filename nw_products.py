@@ -1,5 +1,3 @@
-# cust_rows = cursor.execute("SELECT * FROM Customers").fetchall()
-# print(cust_rows)
 
 # class and object
 import pyodbc
