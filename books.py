@@ -20,11 +20,11 @@ class NewBooks:
     def retrieve_info(self):
         #url = "https://openlibrary.org/books/"
         books = input("Please enter book id that you're interested in: ")
-        url_arg = url + books
+       # url_arg = url + books
         # to check status code
-        response = requests.get(url_arg)
-        print(response.status_code)
-        print(url_arg)
+        #response = requests.get(url_arg)
+        #print(response.status_code)
+        print(books)
 
     def check_status(self):
         try:
