@@ -41,7 +41,7 @@ while True:
     print(record.UnitPrice)`
 
 ### Useful link to help PYODBC installation:
-- `https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/`
+- `https://docs.microsoft.com/en-gb/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15`
 ### SQL TASK:
 
 
