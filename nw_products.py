@@ -29,3 +29,7 @@ class NewProducts:
         # print(prod_row)
         # print(my_row)
         print(new_row)
+
+
+    def create_table(self):
+        pass
