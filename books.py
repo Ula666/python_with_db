@@ -2,10 +2,11 @@ import requests
 
 class NewBooks:
     def __init__(self):
+        self.url = "https://openlibrary.org/books/"
         self.greetings()
-        self.retrieve_info()
-
-        pass
+        self.books = input("Please enter book id that you're interested in: ")
+       # self.url_arg = self.url + self.books
+        #self.retrieve_info()
 
     def greetings(self):
         print("Hello User!")
@@ -14,34 +15,24 @@ class NewBooks:
 
 # OL7353617M
 
-        #response_dict = response.json()
-        #response_keys = response_dict["result"]
 
-    def retrieve_info(self):
-        #url = "https://openlibrary.org/books/"
-        books = input("Please enter book id that you're interested in: ")
-       # url_arg = url + books
-        # to check status code
-        #response = requests.get(url_arg)
-        #print(response.status_code)
-        print(books)
+    # def retrieve_info(self):
+    #     books = input("Please enter book id that you're interested in: ")
+    #     print(self.url_arg)
 
     def check_status(self):
-        try:
-            response = requests.get("https://openlibrary.org/books/")
-            if response.status_code == 200:
-                print("You can see the website")
-                print(response.json())
-            else:
-                print("something wrong" + str(response.status_code))
-        except Exception as e:
-            raise("Error")
+        url_arg = self.url + self.books
+        print(url_arg)
+        status = requests.get(url_arg).status_code
+        if status == 200:
+            print("The website is running" +str(status))
+        else:
+            print("Something wrong")
 
 
-if __name__=='__main__':
-    obj = NewBooks()
+book = NewBooks()
+book.greetings()
+book.check_status()
 
 
-    # for items in response_dict.keys():
-    #     if items == "key":
-    #         print("Your book is " + str(response_keys["books"]))
+
