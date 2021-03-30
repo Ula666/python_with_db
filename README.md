@@ -1,4 +1,4 @@
-## python with db
+## Python with DB
 ### Apply CRUD - Create, Read, Update, Delete
 
 
@@ -42,7 +42,42 @@ while True:
 
 ### Useful link to help PYODBC installation:
 - `https://docs.microsoft.com/en-gb/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15`
-### SQL TASK:
+-  ![img.png](img.png)
 
+### SQL TASK: get user input, check website status code, display information to user.
+- import requests, create a class, initialize url
+```python
+import requests
+class NewBooks:
+    def __init__(self):
+        self.url = "https://openlibrary.org/books/"
+        self.greetings()
+        self.books = input("Please enter book id that you're interested in: ")
+    # use this id to check: OL7353617M
+```
+- greet the user
+```python
+    def greetings(self):
+        print("Hello User!")
+```
+- check the status of the website
+```python
+    def check_status(self):
+        url_arg = self.url + self.books
+        print(url_arg)
+        status = requests.get(url_arg).status_code
+        if status == 200:
+            print("The website is running, and the status code is: " + str(status))
+        else:
+            print("Something wrong")
+```
+- call functions
+```python
+
+book = NewBooks()
+book.greetings()
+book.check_status()
+```
+    
 
 
